@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --img-size: 35px;
+  --circle-size: 220px;
+}
+.card {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 45px;
+  position: relative;
+  min-width: 400px;
+  max-width: 450px;
+  margin: 10px 10px;
+  margin-top: 20px;
+}
+.container {
+  position: relative;
+  height: var(--img-size);
+  margin-bottom: 26px;
+}
+.weekly_sales {
+  background: rgb(251,162,135);
+  background: linear-gradient(90deg, rgba(251,162,135,1) 0%, rgba(248,131,121,1) 50%, rgba(249,102,102,1) 100%);
+  
+}
+.weekly_orders {
+  background: rgb(114,235,193);
+  background: linear-gradient(90deg, rgba(114,212,235,1) 0%, rgba(173,216,230,1) 50%, rgba(164,191,228,1) 100%);
+}
+.visitors_online {
+  background: rgb(102,205,131);
+  background: linear-gradient(90deg, rgba(102,205,131,1) 0%, rgba(102,205,170,1) 50%, rgba(102,205,178,1) 100%);
+}
+.h1, .amount, .index {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+.h1 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+.amount {
+  font-size: 38px;
+  margin-bottom: 45px;
+}
+.index {
+  font-size: 20px;
+}
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.3;
+  width: var(--circle-size);
+  height: var(--circle-size);
+}
+.card::before {
+  top: -20px;
+  right: -90px;
+}
+.card::after {
+  top: 150px;
+  right: -40px;
+}
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--img-size);
+  height: var(--img-size);
+  color: white;
+}
